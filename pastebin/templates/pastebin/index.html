@@ -1,0 +1,13 @@
+{% if pasted_list %}
+    <ul>
+    {% for item in pasted_list %}
+        <li>{{ item.paste_text }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+<form action="submit" method="post" id="p">
+{% csrf_token %}
+<textarea rows="10" cols="50" form="p" name="paste_text"></textarea>
+<input type="submit" value="提交" />
+</form>

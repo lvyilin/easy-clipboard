@@ -1,0 +1,5 @@
+<ul>
+{% for item in user.clipboard_set.all %}
+    <li>{{ item.paste_text }}</li>
+{% endfor %}
+</ul>
